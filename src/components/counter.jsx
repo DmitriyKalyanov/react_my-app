@@ -1,16 +1,16 @@
 import React,{useState} from "react";
 
 const Counter = (props) => {
-    console.log(props);
     const {value, onIncrement, onDecrement, onDelete, name, id} = props
 
     const formatValue = () => {
-       return value === 0 ? 'empty' : value
+       return value === 0 ? 'empty' : value // что будет если чилсо меньше нуля?
     }
+    
     const getBadgeClasses = () => {
-    let classes = 'bagde m-2 '
-    classes+=value === 0 ? 'bg-warning' : 'bg-primary'
-    return classes
+        let classes = 'bagde m-2 '
+        classes+=value === 0 ? 'bg-warning' : 'bg-primary' // что будет если чилсо меньше нуля?
+        return classes
     }
     
     return (
